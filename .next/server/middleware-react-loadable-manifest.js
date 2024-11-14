@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"components\\\\Testimonials.js -> react-slick\":{\"id\":\"components\\\\Testimonials.js -> react-slick\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_react-slick_lib_index_js.js\"]}}"
