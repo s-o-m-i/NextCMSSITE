@@ -2,60 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* font-family: "Poppins", sans-serif; */
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Host Grotesk", sans-serif; */
+  font-family: "Lato", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-
-.landing-page-height{
-  min-height: calc(100vh - 72px);
+.landing-page-height {
+ height: calc(100vh - 80px);
 }
 
-.waves {
-  position: fixed;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  z-index: 0;
-}
 .somiindex {
   position: relative;
-
 }
 
-.bg-hero{
-  /* background-image: url("https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"); */
-  /* background-image: url('../../public/images/2268.jpg'); */
-  background-image: url('../../public/images/cae12b2b-dd7b-49c3-b5d1-2b9289c54d71.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
-}
-.dash-bg{
-  background-image: url(../../public/images/cms-dash.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-
-.blur-effect{
+.blur-effect {
   width: 350px;
   height: 350px;
   background-color: pink;
@@ -64,6 +41,104 @@ html {
   top: 0px;
   filter: blur(200px);
 }
-.image-card:hover .image-opener{
-  bottom:0;
+
+.image-card:hover .image-opener {
+  bottom: 0;
+}
+
+.mid-gradient {
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%),
+    linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%);
+  background-blend-mode: multiply;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to left, #f4c4f3 0%, #fc67fa 51%, #db2777 100%);
+  background-size: 200% auto;
+  transition: background-position 0.5s ease;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+}
+
+.btn-grad-2 {
+  background-image: linear-gradient(to right, #abbaab 0%, rgba(255, 255, 255, 0.99) 51%, #abbaab 100%);
+
+  background-size: 200% auto;
+  transition: background-position 0.5s ease;
+}
+
+.btn-grad-2:hover {
+  background-position: right center;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8dcc7;
+  border-radius: 10px;
+  background: linear-gradient(221deg, #171c1c 10.37%, #040607 75.83%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #f472b6, #ec4899, #db2777);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom right, #f472b6, #ec4899, #db2777);
+}
+
+
+::-webkit-scrollbar-horizontal {
+  height: 10px;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes powerIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes resize {
+  from {
+    scale: 0;
+  }
+
+  to {
+    scale: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn .9s ease-in-out;
+}
+
+.power-in {
+  animation: powerIn .7s ease-in-out;
+}
+
+.resize-img {
+  animation: resize .7s ease-in-out;
 }

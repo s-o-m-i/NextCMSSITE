@@ -12,7 +12,7 @@ function Testimonials() {
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
-        setIsMounted(true); // Only render Slider after component is mounted on the client
+        setIsMounted(true); 
     }, []);
 
     const settings = {
@@ -32,8 +32,11 @@ function Testimonials() {
     return (
         <div className="lg:container mx-auto px-4 sm:px-0" id="partners">
 
-<h1 className="text-[38px] text-[#2c3e4f] text-center mb-14 font-[700]">Testimonials</h1>
+<h1 className="text-[42px] text-[#2c3e4f] text-center mb-14 font-[700]">Testimonials</h1>
             <style jsx global>{`
+            .slick-dots{
+            bottom: -80px;
+            }
                 .slick-prev:before, .slick-next:before {
                     color: #404041; 
                 }

@@ -1,0 +1,138 @@
+{
+    "buttons": {
+      "getStarted": "ابدأ الآن"
+    },
+    "LocaleSwitcher": {
+      "ar": "العربية",
+      "en": "الإنجليزية",
+      "label": "اللغة"
+    },
+    "HomePage": {
+      "title": "إدارة المحتوى الخاص بك باستخدام نظام إدارة المحتوى",
+      "desc": "نظام إدارة محتوى Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et distinctio enim dicta recusandae dipisicing elit"
+    },
+    "analytics": {
+      "cardTitle": "",
+      "cardDesc": "",
+      "aboutNumber": ""
+    },
+    "services": {
+      "title": "الخدمات",
+      "desc": "أخيرًا، نظام إدارة محتوى يوفر لك...",
+      "cardOne": {
+        "title": "",
+        "desc": ""
+      },
+      "cardTwo": {
+        "title": "",
+        "desc": ""
+      },
+      "cardThree": {
+        "title": "",
+        "desc": ""
+      },
+      "cardFour": {
+        "title": "",
+        "desc": ""
+      }
+    },
+    "showCase": {
+      "title": "عرض نظام إدارة المحتوى",
+      "desc": "اكتشف نظام إدارة المحتوى الخاص بنا أثناء العمل—أدوات قوية، تصميم بديهي، وميزات مرنة تسهل إدارة المحتوى وتعزز سير العمل."
+    },
+    "pricing": {
+  "titleSliceOne": "ابدأ الآن على",
+    "titleSliceTwo": "MaintainX اليوم",
+      "cardOne": {
+        "title": "",
+        "duraton": "",
+        "perks": {
+          "perkOne": ""
+        }
+      },
+      "cardTwo": {
+        "title": "",
+        "duraton": "",
+        "perks": {
+          "perkOne": ""
+        }
+      },
+      "cardThree": {
+        "title": "",
+        "duraton": "",
+        "perks": {
+          "perkOne": ""
+        }
+      }
+    },
+    "testimonials": {
+      "title": "آراء العملاء",
+      "first": {
+        "name": "",
+        "about": "",
+        "desc": ""
+      }
+    },
+    "faqs": {
+      "title": "الأسئلة الشائعة",
+      "desc": "ما زلت بحاجة إلى مساعدة؟ تحدث معنا.",
+      "faqOne": {
+        "ques": "ما الذي نقوم به؟",
+        "ans": "نعم، يتيح MaintainX Enterprise إدارة مصانع أو منشآت متعددة ضمن نفس المنصة. يمكنك أيضًا إنشاء لوحات معلومات مخصصة للتقارير لتتبع مؤشرات الأداء عبر مواقع متعددة في نفس الشاشة."
+      },
+      "faqTwo": {
+        "ques": "",
+        "ans": ""
+      },
+      "faqThree": {
+        "ques": "",
+        "ans": ""
+      },
+      "faqFour": {
+        "ques": "",
+        "ans": ""
+      }
+    },
+    "freeTrial": {
+      "titleSliceOne": "احصل على",
+      "titleSliceTwo": "تجربة مجانية لمدة 30 يومًا",
+      "card": {
+        "desc": "قم بإنشاء حساب على نظام إدارة المحتوى الخاص بنا واحصل على رخصة مجانية. غير محدودة ومزودة بجميع ميزاتنا، إنها مناسبة لأي مشروع، سواء كان شخصيًا أو تجاريًا. ابدأ رحلتك مع نظام إدارة المحتوى الخاص بنا اليوم."
+      }
+    },
+    "contactUs": {
+      "titleSliceOne": "لنتواصل لتحويل",
+      "titleSliceTwo": "محتواك!",
+      "form": {
+        "labelOne": "الاسم الأول",
+        "labelTwo": "اسم العائلة",
+        "labelThree": "البريد الإلكتروني",
+        "labelFour": "رقم الهاتف",
+        "labelFive": "الرسالة",
+        "sendMessage": "إرسال الرسالة"
+      }
+    },
+    "header": {
+      "nav": {
+        "pricing": "التسعير",
+        "services": "الخدمات",
+        "product": "المنتج"
+      },
+      "contactUs": "اتصل بنا"
+    },
+    "footer": {
+      "columnOne": {
+        "title": ""
+      },
+      "columnTwo": {
+        "title": "استكشف"
+      },
+      "columnThree": {
+        "title": "تواصل معنا"
+      },
+      "columnFour": {
+        "title": "لنتواصل"
+      }
+    }
+  }
+  

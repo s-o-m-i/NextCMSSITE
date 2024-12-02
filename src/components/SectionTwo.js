@@ -9,52 +9,46 @@ import { FaLaptopCode } from "react-icons/fa6";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
 
 const SectionTwo = () => {
-
+const servicesTrans = useTranslations("services")
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(
     () => {
-        
+
       gsap.from('.service-card', {
         y: 500,
-        opacity:0,
-        duration: 2,
+        opacity: 0,
         ease: 'power2.inOut',
-        stagger: 1, 
+        stagger: .2,
         scrollTrigger: {
-            trigger: '.services-container',
-            // scroller:".section-two-wrapper",
-        start:"top 80%",
-        end:"top 10%",
-        scrub: true,
-            
+          trigger: '.services-container',
+          start: "top 80%",
+          end: "top 10%",
         }
-    });
+      });
 
 
-    gsap.from(".content-card",{
-x:-300,
-duration:1,
-opacity:0,
-scrollTrigger:{
-  trigger:".section-two-wrapper",
-  start:"top 80%",
-  end:"top 10%",
-  scrub:true,
-  
-}
-    })
+      gsap.from(".content-card", {
+        x: -300,
+        duration: .5,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".section-two-wrapper",
+          start: "top 80%",
+          end: "top 10%",
 
+        }
+      })
     },
-    // { scope: container }
-);
-  
+  );
+
   return (
     <div className="section-two-wrapper sm:min-h-screen bg-white relative">
       <div className="md:container md:mx-auto  sm:px-20">
         <div className="grid grid-cols-12 mt-24">
-          <div className="content-card bg-white rounded-[16px] shadow-[0_0_20px_rgba(0,0,0,0.04)] p-[50px_35px_35px_35px] relative col-span-12 sm:col-span-8">
+          <div className="content-card bg-white rounded-[16px] shadow-[0_0_20px_rgba(0,0,0,0.04)] px-2 py-10 sm:p-[50px_35px_35px_35px] relative col-span-12 sm:col-span-8 border-4 border-[#f8e9ed]">
             <div className="w-[70px] h-[70px] rounded-[50%] bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br absolute -top-[35px] flex items-center justify-center text-white text-[30px]">
               <FaLaptopCode />
             </div>
@@ -62,7 +56,7 @@ scrollTrigger:{
               Built for Business Insights, Trusted by Professionals
             </h1>
 
-            <p className="text-[#2c3e4f] text-[18px] mt-[30px] leading-9">
+            <p className="text-[#2c3e4f] text-[18px] mt-[30px] sm:leading-9">
               Businesses and teams love it for its simplicity, and so do their
               decision-makers. Thousands of companies across industries like
               retail, healthcare, and manufacturing rely on our CMS to
@@ -72,7 +66,7 @@ scrollTrigger:{
             </p>
           </div>
 
-          <div className="count col-span-12 sm:col-span-4  flex items-center justify-center">
+          <div className="count col-span-12 sm:col-span-4  flex items-center justify-center mt-5 sm:mt-0">
             <div className="">
               <h1 className="text-[70px] text-[#2c3e4f] font-bold">300k+</h1>
               <h5 className="text-[18px]">Websites Built by Happy Customers</h5>
@@ -80,24 +74,24 @@ scrollTrigger:{
           </div>
         </div>
 
-        <div className="py-20">
-          <h2 className="text-[32px] text-[#2c3e4f] text-center font-bold mt-24">
-            Services
+        <div className="py-20" id="services">
+          <h2 className="text-[32px] sm:text-[52px] text-[#2c3e4f] text-center font-bold mt-24">
+        {servicesTrans("title")}
           </h2>
           <h2 className="text-[22px] text-[#2c3e4f] text-center font-medium mb-24">
-            Finally, A Content Management System That…
+          {servicesTrans("desc")}
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 gap-y-12 services-container mt-20 sm:mt-0">
-         
 
 
-<div className="service-card bg-white rounded-[16px] shadow-[0_0_20px_rgba(0,0,0,0.04)] p-[50px_35px_35px_35px] relative">
+
+            <div className="service-card bg-white rounded-[16px] shadow-[0_0_20px_rgba(0,0,0,0.04)] p-[50px_35px_35px_35px] relative border-4 border-[#f8e9ed]">
               <div className="w-[60px] h-[60px] rounded-[50%] bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br absolute -top-[35px] flex items-center justify-center text-white text-[20px]">
-              <BsStack />
+                <BsStack />
               </div>
               <h1 className="text-[#2c3e4f] text-[22px] font-bold">
-              Fits Your Tech Stack
+                Fits Your Tech Stack
               </h1>
 
               <p className="text-[#2c3e4f] text-[18px] mt-[30px] leading-9">
@@ -107,7 +101,7 @@ scrollTrigger:{
             </div>
 
 
-            <div className="service-card bg-white rounded-[16px] shadow-[0_0_20px_rgba(0,0,0,0.04)] p-[50px_35px_35px_35px] relative">
+            <div className="service-card bg-white rounded-[16px] shadow-[0_0_20px_rgba(0,0,0,0.04)] p-[50px_35px_35px_35px] relative border-4 border-[#f8e9ed]">
               <div className="w-[60px] h-[60px] rounded-[50%] bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br absolute -top-[35px] flex items-center justify-center text-white text-[20px]">
                 <IoBookOutline />
               </div>
@@ -121,7 +115,7 @@ scrollTrigger:{
               </p>
             </div>
 
-            <div className="service-card bg-white rounded-[16px] shadow-[0_0_20px_rgba(0,0,0,0.04)] p-[50px_35px_35px_35px] relative">
+            <div className="service-card bg-white rounded-[16px] shadow-[0_0_20px_rgba(0,0,0,0.04)] p-[50px_35px_35px_35px] relative border-4 border-[#f8e9ed]">
               <div className="w-[60px] h-[60px] rounded-[50%] bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br absolute -top-[35px] flex items-center justify-center text-white text-[20px]">
                 <GoStopwatch />
               </div>
@@ -134,7 +128,7 @@ scrollTrigger:{
                 onboarding new hires is quicker and easier.
               </p>
             </div>
-            <div className="service-card bg-white rounded-[16px] shadow-[0_0_20px_rgba(0,0,0,0.04)] p-[50px_35px_35px_35px] relative">
+            <div className="service-card bg-white rounded-[16px] shadow-[0_0_20px_rgba(0,0,0,0.04)] p-[50px_35px_35px_35px] relative border-4 border-[#f8e9ed]">
               <div className="w-[60px] h-[60px] rounded-[50%] bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br absolute -top-[35px] flex items-center justify-center text-white text-[20px]">
                 <ImHappy />
               </div>

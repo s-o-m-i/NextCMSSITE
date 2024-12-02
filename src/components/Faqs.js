@@ -23,7 +23,7 @@ const Faqs = () => {
       <section id="faqs " className="md:container md:mx-auto px-4  sm:px-20 py-5 mt-20">
         <div className="grid grid-cols-12">
           <div className="faq-text col-span-12 sm:col-span-4">
-            <h1 className="text-[32px] sm:text-[42px] text-[#2c3e4f] font-[700]">
+            <h1 className="text-[42px] sm:text-[42px] text-[#2c3e4f] font-[700]">
               Frequently Asked Questions
             </h1>
             <h3 className="text-[22px] text-[#2c3e4f] font-medium mt-5">

@@ -6,7 +6,7 @@ const FreeTrial = () => {
       <div className="md:container md:mx-auto my-36 px-2  sm:px-20">
         <div className="grid grid-cols-12 sm:gap-8  items-center">
           <h1
-            className="text-[32px] sm:text-[60px] font-semibold text-[#2c3e4f]
+            className="text-[42px] sm:text-[60px] font-semibold text-[#2c3e4f]
         col-span-12
             sm:col-span-5
         "

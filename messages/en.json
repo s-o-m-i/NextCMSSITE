@@ -1,0 +1,137 @@
+{
+    "buttons": {
+        "getStarted": "Get Started"
+    },
+    "LocaleSwitcher": {
+        "ar": "Arabic",
+        "en": "English",
+        "label": "Language"
+    },
+    "HomePage": {
+        "title": "Managing your content with CMS",
+        "desc": "An content management system Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum et distinctio enim dicta recusandae dipisicing elit"
+    },
+    "analytics": {
+        "cardTitle": "",
+        "cardDesc": "",
+        "aboutNumber": ""
+    },
+    "services": {
+        "title": "Services",
+        "desc": "Finally, A Content Management System That…",
+        "cardOne": {
+            "title": "",
+            "desc": ""
+        },
+        "cardTwo": {
+            "title": "",
+            "desc": ""
+        },
+        "cardThree": {
+            "title": "",
+            "desc": ""
+        },
+        "cardFour": {
+            "title": "",
+            "desc": ""
+        }
+    },
+    "showCase": {
+        "title": "CMS Showcase",
+        "desc": "Explore our CMS in action—powerful tools, intuitive design, and flexible features that simplify content management and elevate your workflow."
+    },
+    "pricing": {
+        "titleSliceOne": "Get started on",
+        "titleSliceTwo": "MaintainX today",
+        "cardOne": {
+            "title": "",
+            "duraton": "",
+            "perks": {
+                "perkOne": ""
+            }
+        },
+        "cardTwo": {
+            "title": "",
+            "duraton": "",
+            "perks": {
+                "perkOne": ""
+            }
+        },
+        "cardThree": {
+            "title": "",
+            "duraton": "",
+            "perks": {
+                "perkOne": ""
+            }
+        }
+    },
+    "testimonials": {
+        "title": "Testimonials",
+        "first": {
+            "name": "",
+            "about": "",
+            "desc": ""
+        }
+    },
+    "faqs": {
+        "title": "Frequently Asked Questions",
+        "desc": "Still need help? Chat to us.",
+        "faqOne": {
+            "ques": "What do we do?",
+            "ans": "Yes, MaintainX Enterprise allows you to manage multiple plants or facilities within the same platform. You can also create customized reporting dashboards to track KPIs across multiple sites on the same screen."
+        },
+        "faqTwo": {
+            "ques": "",
+            "ans": ""
+        },
+        "faqThree": {
+            "ques": "",
+            "ans": ""
+        },
+        "faqFour": {
+            "ques": "",
+            "ans": ""
+        }
+    },
+    "freeTrial": {
+        "titleSliceOne": "Get a 30-days",
+        "titleSliceTwo": "free trial",
+        "card": {
+            "desc": "Create an Our CMS account and get a free license. Unrestricted and loaded with all our features, it's suitable for any project, whether personal or commercial. Begin your journey with Our CMS today."
+        }
+    },
+    "contactUs": {
+        "titleSliceOne": "Let's Connect to Transform Your",
+        "titleSliceTwo": "Content!",
+        "form": {
+            "labelOne": "First Name",
+            "labelTwo": "Last Name",
+            "labelThree": "Email",
+            "labelFour": "Phone Number",
+            "labelFive": "Message",
+            "sendMessage": "Send Message"
+        }
+    },
+    "header": {
+        "nav": {
+            "pricing": "Pricing",
+            "services": "Services",
+            "product": "Product"
+        },
+        "contactUs": "Contact Us"
+    },
+    "footer": {
+        "columnOne": {
+            "title": ""
+        },
+        "columnTwo": {
+            "title": "Explore"
+        },
+        "columnThree": {
+            "title": "GET IN TOUCH"
+        },
+        "columnFour": {
+            "title": "LET'S CONNECT"
+        }
+    }
+}

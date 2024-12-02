@@ -1,15 +1,19 @@
 'use client'
 import React, { useState } from "react";
 
-const PricingSwitchTwo = () => {
+const PricingSwitchTwo = ({setCurrentDuration}) => {
   const [selectedOption, setSelectedOption] = useState("monthly");
-
+  const handleClick = (duration) => {
+    
+    setSelectedOption(duration)
+    setCurrentDuration(duration)
+  }
   return (
     <div className="button-box">
       <div className="flex items-center gap-4 mb-4">
         
         
-        <div className={`flex items-center py-2 px-3 transition-all duration-300 ease-in-out  ${selectedOption === 'monthly'?"bg-[#ea4199] text-white":"text-black"} rounded-md`}  onClick={() => setSelectedOption("monthly")}>
+        <div className={`flex items-center py-2 px-3 transition-all duration-300 ease-in-out  ${selectedOption === 'monthly'?"bg-[#ea4199] text-white":"text-black"} rounded-md`}  onClick={() => handleClick("monthly")}>
           <input
             id="monthly-radio"
             type="radio"
@@ -24,7 +28,7 @@ const PricingSwitchTwo = () => {
         </div>
 
         
-        <div className={`flex items-center py-2 px-3 transition-all duration-300 ease-in-out   ${selectedOption === 'yearly'?"bg-[#ea4199] text-white":"text-black"} rounded-md`}  onClick={() => setSelectedOption("yearly")}>
+        <div className={`flex items-center py-2 px-3 transition-all duration-300 ease-in-out   ${selectedOption === 'yearly'?"bg-[#ea4199] text-white":"text-black"} rounded-md`}  onClick={() => handleClick("yearly")}>
           <input
             id="yearly-radio"
             type="radio"
@@ -40,7 +44,7 @@ const PricingSwitchTwo = () => {
         </div>
 
         
-        <div className={`flex items-center py-2 px-3 transition-all duration-300 ease-in-out   ${selectedOption === 'quarterly'?"bg-[#ea4199] text-white":"text-black"} rounded-md`}  onClick={() => setSelectedOption("quarterly")}>
+        <div className={`flex items-center py-2 px-3 transition-all duration-300 ease-in-out   ${selectedOption === 'quarterly'?"bg-[#ea4199] text-white":"text-black"} rounded-md`}  onClick={() => handleClick("quarterly")}>
           <input
             id="quarterly-radio"
             type="radio"

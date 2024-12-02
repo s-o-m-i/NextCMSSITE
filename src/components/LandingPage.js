@@ -1,66 +1,50 @@
 "use client";
-import React, { useEffect } from "react";
-
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { waves } from "./waves";
+import React, { useEffect, useState } from "react";
+import CMSDash from '../../public/images/cms-dash.png'
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const LandingPage = () => {
+  const t = useTranslations('HomePage');
+  const buttonTranslations = useTranslations('buttons');
+  const [isMounted, setIsMounted] = useState(false)
   useEffect(() => {
-    waves();
+    setIsMounted(false)
   }, []);
-
-
-  useGSAP(() => {
-    const  tl = gsap.timeline()
-    tl.from(".main-text", {
-      opacity:0,
-      y: 100,
-      duration: 0.3,
-      ease: "power2.inOut",
-      stagger: 0.3,
-    });
-    tl.from(".start-btn", {
-      opacity:0,
-      y: 100,
-      duration: 0.3,
-      ease: "power2.inOut",
-      stagger: 0.3,
-    });
-    tl.from(".left-text", {
-      opacity:0,
-      x: -100,
-      duration: 0.3,
-      ease: "power2.inOut",
-      stagger: 0.3,
-    });
-
-
-  });
-
 
   return (
     <>
-      <div className="md:container md:mx-auto landing-page-height somiindex ">
-     
-        {/* <div className="waves" /> */}
-        <div className="content text-center flex flex-col items-center pt-36  tracking-wide">
-          <h1 className=" text-[36px] sm:text-[60px] md:text-[90px] font-semibold text-[#fff] leading-[1.2] main-text capitalize">
-            Managing your <br /> content with <span className="">CMS</span> 
-          </h1>
-          <p className="text-center left-text text-[#fff] px-2 text-[16px] sm:text-[18px] leading-7  w-full sm:w-[55%] mt-5 z-[999] ">
-            An content management system Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Voluptatum et distinctio enim dicta recusandae
-            dipisicing elit
-          </p>
+      <div className="md:container md:mx-auto landing-page-height px-4  sm:px-20 flex items-center">
+        {isMounted ? <h1>Loading ...</h1> :
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+            <div className="flex flex-col tracking-wide">
+              <div className="overflow-hidden ">
+                <h1 className=" text-[36px] sm:text-[60px] md:text-[70px] font-semibold text-[#000] leading-[1.2] main-text capitalize same  power-in ">
+                  {t("title").split(" ").map((text, index) => (
+                    <React.Fragment key={index}>
+                      {`${text} `}
+                      {text === "Your" && <br />}
+                    </React.Fragment>
+                  ))}
+                </h1>
+              </div>
+              <div className="overflow-hidden">
+                <p className=" text-[#666666] sm:px-2 text-[16px] sm:text-[18px] leading-7  w-full sm:w-[90%]  mt-5 z-[999] same fade-in power-in">
+                  {t("desc")}
+                </p>
+              </div>
+              <div className="overflow-hidden">
+                <button className="mt-10  px-5 py-3 rounded-lg bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br w-fit text-white same fade-in power-in">{buttonTranslations("getStarted")}</button>
+              </div>
+            </div>
+            <div className="image-section sm:flex items-center justify-center hidden ">
+              <Image
+                src={CMSDash}
+                className="shadow-lg hover:scale-[1.1] transition-all duration-300 ease-in-out resize-img"
+              />
+            </div>
+          </div>}
 
-          <button className="group start-btn relative m-1 cursor-pointer overflow-hidden rounded-lg border-1 border-[#23303d] px-5 py-4 font-medium text-sm w-[160px] mt-8 bg-[#23303d]">
-            <span className="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-[#fff] transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
-            <span className="ease relative text-[#fff] transition duration-300 group-hover:text-[#23303d]">
-              Get Started
-            </span>
-          </button>
-        </div>
       </div>
     </>
   );
