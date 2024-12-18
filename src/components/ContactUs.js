@@ -3,18 +3,20 @@ import React, { useEffect, useState } from 'react'
 import PrimaryButton from './PrimaryButton'
 import { useForm, ValidationError } from '@formspree/react';
 import ThankYouModal from './ContactUs/Modal';
+import ReCAPTCHA from "react-google-recaptcha";
 const ContactUs = () => {
   const [state, handleSubmit, reset] = useForm("mzzbvkgk");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isHuman,setIsHuman] = useState(false)
   useEffect(() => {
     const formElement = document.querySelector("#contact-form")
     if(formElement){
       const inputs = formElement.querySelectorAll("input, textarea")
       
       inputs.forEach((elem)=>{
-        console.log(elem.value)
+
         elem.value=""
-        console.log(elem.value)
+   
       })
     }
 
@@ -23,6 +25,13 @@ const ContactUs = () => {
       reset()
     }
   }, [state.succeeded])
+  function onChange(value) {
+    console.log("Captcha value:", value);
+    if(value){
+      setIsHuman(true)
+      value.reset()
+    }
+  }
   return (
     <>
       <section id="contact-us" className="bg-white m-h-screen md:container mx-auto py-20 px-4  sm:px-20">
@@ -60,7 +69,7 @@ const ContactUs = () => {
                 className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:border-gray-500 focus:outline-none focus:ring-0 placeholder:text-sm" required />
             </div>
             <div className="input-field border-b border-[#f472b6] py-2">
-              <label htmlFor="message" className="block mb-2 text-[16px] font-medium text-[#2c3e4f]">Message</label>
+              <label htmlFor="message" className="block mb-2 text-[16px] font-medium text-[#2c3e4f]">Request</label>
               <textarea name='message' id="message" placeholder="Your Message" rows="4"
                 className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:border-gray-500 focus:outline-none focus:ring-0
                    placeholder:text-sm" required></textarea>
@@ -70,9 +79,13 @@ const ContactUs = () => {
               field="message"
               errors={state.errors}
             />
-            <div className="text-center " type="submit" disabled={state.submitting}>
+          {!isHuman ?    <ReCAPTCHA
+    sitekey="6Ldx5pAqAAAAACQXmhb7omcylaSt70x2FJhS4K0a"
+    onChange={onChange}
+  />:       <div className="text-center " type="submit" disabled={state.submitting}>
               <PrimaryButton text={"Send Message"} />
             </div>
+            }
           </form>
         </div>
       </section>
